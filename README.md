@@ -26,7 +26,7 @@ npm install
 3. Setup environment
 ```bash
 cp .env.example .env
-# แก้ไขค่าในไฟล์ .env ให้ตรงกับ database ของคุณ
+# แก้ไขค่าในไฟล์ .env ให้ตรงกับ database
 ```
 
 4. Create database
@@ -147,16 +147,3 @@ curl -X POST http://localhost:3000/api/transfers \
 - `getInternalTransfers()` - ดึง internal transfers
 - `getExternalTransfers()` - ดึง external transfers
 - `getByCurrency()` - ดึง transfers ของ currency นั้น
-
-## ข้อมูลทดสอบ
-
-หลังจากรัน `npm run seed` จะได้ข้อมูลทดสอบ:
-
-- **Users**: 4 คน (john, jane, bob, alice)
-- **Currencies**: BTC, ETH, XRP, DOGE, THB, USD
-- **Wallets**: แต่ละ user มี wallets หลายตัว
-- **Orders**: มี orders ทั้ง buy/sell/completed
-- **Transfers**: ทั้ง internal และ external
-- **Transactions**: ธุรกรรมที่เกิดจาก orders
-
-รหัสผ่านทุกคนคือ: `password123`
