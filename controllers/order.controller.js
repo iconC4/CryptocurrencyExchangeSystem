@@ -1,4 +1,5 @@
 import db from "../models/index.js";
+import { matchOrder } from "../services/matching.service.js";
 const { Order } = db;
 
 export const createOrder = async(req, res) => {
@@ -26,6 +27,7 @@ export const createOrder = async(req, res) => {
             Quantity,
             Price,
         });
+        await matchOrder();
 
         res.status(201).json(order);
     } catch (error) {

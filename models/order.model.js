@@ -29,6 +29,10 @@ export default (sequelize, DataTypes) => {
                 type: DataTypes.DECIMAL(18, 8),
                 allowNull: false,
             },
+            Filled_Amount: {
+                type: DataTypes.DECIMAL(18, 8),
+                defaultValue: 0.0,
+            },
             Status: {
                 type: DataTypes.ENUM("open", "matched", "cancelled"),
                 defaultValue: "open",

@@ -21,6 +21,10 @@ export default (sequelize, DataTypes) => {
                 type: DataTypes.DECIMAL(18, 8),
                 allowNull: false,
             },
+            Transaction_Fee: {
+                type: DataTypes.DECIMAL(18, 8),
+                allowNull: false,
+            },
             Total: {
                 type: DataTypes.DECIMAL(18, 8),
                 allowNull: false,
