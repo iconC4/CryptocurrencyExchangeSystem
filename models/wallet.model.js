@@ -17,6 +17,11 @@ export default (sequelize, DataTypes) => {
                 type: DataTypes.STRING,
                 allowNull: false,
             },
+            Balance: {
+                type: DataTypes.DECIMAL(20, 8),
+                allowNull: false,
+                defaultValue: 0.0,
+            },
         }, { tableName: "Wallets", timestamps: false }
     );
 
